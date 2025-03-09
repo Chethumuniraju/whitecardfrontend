@@ -64,15 +64,17 @@ const AddOfficer = () => {
   };
 
   return (
-    <Container fluid className="py-4">
-      <h2 className="text-center mb-4">Register Document Officers</h2>
+    <Container fluid style={{ padding: '20px' }}>
+      <h2 className="text-center mb-4" style={{ color: '#007bff', fontWeight: 'bold' }}>
+        Register Document Officers
+      </h2>
       <Row className="justify-content-center">
         <Col md={8} lg={6}>
-          <Card className="shadow">
-            <Card.Body className="p-4">
+          <Card className="shadow" style={{ borderRadius: '10px', border: '1px solid #ddd' }}>
+            <Card.Body style={{ padding: '30px' }}>
               <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3">
-                  <Form.Label>Document Type</Form.Label>
+                  <Form.Label style={{ fontWeight: 'bold' }}>Document Type</Form.Label>
                   <Form.Select name="documentType" value={formData.documentType} onChange={handleChange} required>
                     {documentTypes.map(({ type, title }) => (
                       <option key={type} value={type}>{title}</option>
@@ -81,26 +83,26 @@ const AddOfficer = () => {
                 </Form.Group>
 
                 <Form.Group className="mb-3">
-                  <Form.Label>Officer Name</Form.Label>
+                  <Form.Label style={{ fontWeight: 'bold' }}>Officer Name</Form.Label>
                   <Form.Control type="text" name="name" value={formData.name} onChange={handleChange} required placeholder="Enter officer's name" />
                 </Form.Group>
 
                 <Form.Group className="mb-3">
-                  <Form.Label>Email</Form.Label>
+                  <Form.Label style={{ fontWeight: 'bold' }}>Email</Form.Label>
                   <Form.Control type="email" name="email" value={formData.email} onChange={handleChange} required placeholder="Enter officer's email" />
                 </Form.Group>
 
                 <Form.Group className="mb-3">
-                  <Form.Label>Password</Form.Label>
+                  <Form.Label style={{ fontWeight: 'bold' }}>Password</Form.Label>
                   <Form.Control type="password" name="password" value={formData.password} onChange={handleChange} required placeholder="Enter password" />
                 </Form.Group>
 
                 <Form.Group className="mb-4">
-                  <Form.Label>Phone Number</Form.Label>
+                  <Form.Label style={{ fontWeight: 'bold' }}>Phone Number</Form.Label>
                   <Form.Control type="tel" name="phone" value={formData.phone} onChange={handleChange} required placeholder="Enter phone number" pattern="[0-9]{10}" />
                 </Form.Group>
 
-                <Button variant="primary" type="submit" className="w-100">
+                <Button variant="primary" type="submit" className="w-100" style={{ fontSize: '18px', fontWeight: 'bold' }}>
                   Register Officer
                 </Button>
               </Form>

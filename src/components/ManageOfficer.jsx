@@ -34,8 +34,12 @@ const ManageOfficer = () => {
   };
 
   return (
-    <Container fluid className="py-4">
-      <h2 className="text-center mb-4">Manage Officers</h2>
+    <Container 
+      fluid 
+      className="py-4"
+      style={{ backgroundColor: "#E3F2FD", minHeight: "100vh", fontFamily: "Arial, sans-serif" }} // Light blue background & font style
+    >
+      <h2 className="text-center mb-4" style={{ fontWeight: "bold" }}>Manage Officers</h2>
       <Card className="shadow p-4">
         <Table striped bordered hover>
           <thead>

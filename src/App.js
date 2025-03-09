@@ -12,6 +12,7 @@ import RegisteredDocuments from './components/RegisterDocuments';
 import AddOfficer from './components/AddOfficer';
 import ManageOfficer from './components/ManageOfficer';
 import MyNavbar from './components/Navbar';
+import "./App.css"
 function App() {
   return (
     <div className="App">

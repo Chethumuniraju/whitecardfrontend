@@ -1031,7 +1031,10 @@ const OfficerDashboard = () => {
   };
 
   return (
-    <Container fluid className="py-4">
+    <Container fluid className="py-4"   style={{
+      backgroundColor: "#E3F2FD", // Light blue
+     
+    }}>
       <h2 className="text-center mb-4">Document Verification Dashboard</h2>
       {documents.length === 0 ? (
         <div className="text-center">

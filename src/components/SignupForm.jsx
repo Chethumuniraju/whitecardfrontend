@@ -27,7 +27,6 @@ const SignupForm = ({ userType }) => {
 
       await axios.post(endpoint, formData);
       alert('Signup successful!');
-      // Navigate to login page after successful signup
       navigate(`/${userType}-login`);
     } catch (error) {
       alert('Signup failed: ' + error.message);
@@ -35,10 +34,10 @@ const SignupForm = ({ userType }) => {
   };
 
   return (
-    <Container className="mt-5">
+    <Container className="mt-5" style={{ backgroundColor: '#E3F2FD', minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
       <Row className="justify-content-center">
         <Col md={6}>
-          <Card className="shadow">
+          <Card className="shadow" style={{ fontFamily: 'Arial, sans-serif' }}>
             <Card.Body className="p-4">
               <h2 className="text-center mb-4">
                 {userType === 'admin' ? 'Admin Signup' : 'User Signup'}
@@ -105,4 +104,4 @@ const SignupForm = ({ userType }) => {
   );
 };
 
-export default SignupForm; 
+export default SignupForm;

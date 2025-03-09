@@ -77,7 +77,10 @@ const RegisteredDocuments = () => {
   };
 
   return (
-    <Container className="py-4">
+    <Container className="py-4" style={{
+      backgroundColor: "#E3F2FD", // Light blue
+     
+    }} >
       <h2 className="mb-4 text-center">Registered Documents</h2>
 
       {documents ? (

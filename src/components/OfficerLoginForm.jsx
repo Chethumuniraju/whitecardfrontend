@@ -42,7 +42,11 @@ const OfficerLoginForm = () => {
   };
 
   return (
-    <Container className="mt-5">
+    <Container 
+      className="mt-5" 
+      fluid 
+      style={{ backgroundColor: '#E3F2FD', minHeight: '100vh', paddingTop: '50px' }}
+    >
       <Row className="justify-content-center">
         <Col md={6}>
           <Card className="shadow">
@@ -85,4 +89,4 @@ const OfficerLoginForm = () => {
   );
 };
 
-export default OfficerLoginForm; 
+export default OfficerLoginForm;

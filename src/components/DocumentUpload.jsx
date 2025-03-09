@@ -57,8 +57,8 @@ const DocumentUpload = () => {
   };
 
   return (
-    <Container fluid className="py-4">
-      <div className="d-flex justify-content-between align-items-center mb-4">
+    <Container fluid style={{ padding: '20px' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
         <h2>Upload Documents</h2>
         <Button variant="secondary" onClick={() => navigate('/user-dashboard')}>
           Back to Dashboard
@@ -68,11 +68,11 @@ const DocumentUpload = () => {
       <Row className="g-4">
         {documentTypes.map(({ type, title }) => (
           <Col key={type} xs={12} md={6} lg={4}>
-            <Card className="h-100 shadow-sm">
-              <Card.Body className="d-flex flex-column">
-                <Card.Title className="text-center mb-3">{title}</Card.Title>
+            <Card style={{ boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', padding: '15px', height: '100%' }}>
+              <Card.Body style={{ display: 'flex', flexDirection: 'column' }}>
+                <Card.Title style={{ textAlign: 'center', marginBottom: '15px' }}>{title}</Card.Title>
                 
-                <Form.Group className="mb-3">
+                <Form.Group style={{ marginBottom: '15px' }}>
                   <Form.Label>Upload {title}</Form.Label>
                   <Form.Control
                     type="file"
@@ -81,10 +81,10 @@ const DocumentUpload = () => {
                   />
                 </Form.Group>
 
-                <div className="mt-auto">
+                <div style={{ marginTop: 'auto' }}>
                   <Button
                     variant="primary"
-                    className="w-100"
+                    style={{ width: '100%' }}
                     onClick={() => handleUpload(type)}
                     disabled={!selectedFiles[type]}
                   >
@@ -100,4 +100,4 @@ const DocumentUpload = () => {
   );
 };
 
-export default DocumentUpload; 
+export default DocumentUpload;

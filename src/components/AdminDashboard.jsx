@@ -6,7 +6,11 @@ const AdminDashboard = () => {
   const navigate = useNavigate();
 
   return (
-    <Container fluid className="py-4">
+    <Container 
+      fluid 
+      className="py-4" 
+      style={{ backgroundColor: "#E3F2FD", minHeight: "100vh" }} // Light blue background
+    >
       <h2 className="text-center mb-4">Admin Dashboard</h2>
       <Row className="justify-content-center">
         <Col md={6}>

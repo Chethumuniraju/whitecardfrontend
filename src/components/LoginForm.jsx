@@ -36,15 +36,30 @@ const LoginForm = ({ userType }) => {
   };
 
   return (
-    <Container className="mt-5">
-      <Row className="justify-content-center">
+    <Container 
+      fluid 
+      className="d-flex align-items-center justify-content-center" 
+      style={{ 
+        minHeight: '100vh', 
+        backgroundColor: '#f4f4f4'  // Set this to match the color of your other pages
+      }}
+    >
+      <Row className="justify-content-center w-100">
         <Col md={6}>
-          <Card className="shadow">
-            <Card.Body className="p-4">
-              <h2 className="text-center mb-4">{userType === 'admin' ? 'Admin Login' : 'User Login'}</h2>
+          <Card 
+            style={{ 
+              borderRadius: '15px', 
+              boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.2)',
+              backgroundColor: '#F39C12' // Keeping the card white for contrast
+            }}
+          >
+            <Card.Body className="p-5">
+              <h2 className="text-center mb-4" style={{ color: '#333', fontWeight: 'bold' }}>
+                {userType === 'admin' ? 'Admin Login' : 'User Login'}
+              </h2>
               <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3">
-                  <Form.Label>Email</Form.Label>
+                  <Form.Label style={{ fontWeight: 'bold' }}>Email</Form.Label>
                   <Form.Control
                     type="email"
                     name="email"
@@ -52,11 +67,12 @@ const LoginForm = ({ userType }) => {
                     onChange={handleChange}
                     required
                     placeholder="Enter your email"
+                    style={{ borderRadius: '10px', padding: '10px' }}
                   />
                 </Form.Group>
 
                 <Form.Group className="mb-4">
-                  <Form.Label>Password</Form.Label>
+                  <Form.Label style={{ fontWeight: 'bold' }}>Password</Form.Label>
                   <Form.Control
                     type="password"
                     name="password"
@@ -64,19 +80,26 @@ const LoginForm = ({ userType }) => {
                     onChange={handleChange}
                     required
                     placeholder="Enter your password"
+                    style={{ borderRadius: '10px', padding: '10px' }}
                   />
                 </Form.Group>
 
-                <Button variant="primary" type="submit" className="w-100 mb-3">
+                <Button 
+                  variant="primary" 
+                  type="submit" 
+                  className="w-100 mb-3" 
+                  style={{ borderRadius: '10px', fontWeight: 'bold', padding: '10px' }}
+                >
                   Login
                 </Button>
 
                 <div className="text-center">
-                  <p className="mb-0">
+                  <p className="mb-0" style={{ fontSize: '14px', color: '#666' }}>
                     Don't have an account?{' '}
                     <Button 
                       variant="link" 
                       className="p-0"
+                      style={{ textDecoration: 'none', fontWeight: 'bold', color: '#007bff' }}
                       onClick={() => navigate(`/${userType}-signup`)}
                     >
                       Sign up
@@ -92,4 +115,4 @@ const LoginForm = ({ userType }) => {
   );
 };
 
-export default LoginForm; 
+export default LoginForm;
